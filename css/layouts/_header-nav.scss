@@ -1,0 +1,80 @@
+
+header{
+    position: relative;
+    height: 600px;
+}
+
+.header-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: $header-nav-height;
+    background-color: $c1;
+    box-shadow: 0 1px 8px -2px rgba(0,0,0,0.2);
+    z-index: 9999;
+    .header-nav-wrap{
+        display: flex;
+        align-items: center ;
+    }
+    
+}
+
+.header-logo{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    .logo-img{
+        height: $header-nav-height;
+        width: auto;
+        display: inline;
+    }
+    .logo-text{
+        font-size: 2rem;
+        color: $c-text;
+        text-transform: uppercase;
+        font-weight: 800;
+    }
+}
+
+.main-nav{
+    display: flex;
+    width: 78%;
+    justify-content: center;
+}
+
+.main-nav-item{
+    .main-nav-link{
+        padding: 0 12px;
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: $c-text;
+        height: $header-nav-height;
+        line-height: $header-nav-height;
+        display: block;
+        letter-spacing: 0.1rem;
+    }
+
+    &:hover .main-nav-link{
+        background-color: $bg2;
+        color: $c1;
+    }
+}
+
+.header-cart{
+    --size: 44px;
+    text-align: right;
+    width: var(--size);
+    height:  var(--size);
+    border-radius: 50%;
+    line-height: var(--size);
+    color: $c1;
+    background-color: $bg2;
+    text-align: center;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: all linear .1s;
+    &:hover{
+        opacity: 0.8;
+    }
+}
